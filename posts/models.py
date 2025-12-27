@@ -22,7 +22,7 @@ class Category(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
-    slug = models.SlugField()
+    slug = models.SlugField(unique=True)
     overview = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
     content = models.TextField()
